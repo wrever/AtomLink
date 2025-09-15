@@ -1,4 +1,4 @@
-# 🚀 AtomLink - Real-World Asset Tokenization Platform
+# 🚀 AtomLink | Real-World Asset Tokenization Platform
 
 > **🏆 Meridian 2025 Hackathon Submission**  
 > *Transforming Real-World Assets into Digital Tokens on Stellar Network*
@@ -52,11 +52,20 @@ React 18 + TypeScript + Vite
 ### **Backend Infrastructure**
 ```php
 PHP 8+ + MySQL
-├── RESTful API (20+ endpoints)
-├── JWT Authentication
+├── RESTful API (15+ endpoints)
+├── Session-based Authentication
 ├── File Upload System
-└── Real-time Analytics
+├── JSON-based Data Storage
+├── CORS-enabled endpoints
+└── Prepared statements for security
 ```
+
+**API Endpoints Structure:**
+- **Admin**: `/api/admin/auth.php`, `/api/admin/auth_dash.php`
+- **Terrenos**: `/api/terrenos/listar.php`, `/api/terrenos/detalle.php`
+- **Propuestas**: `/api/propuestas/crear.php`, `/api/propuestas/aprobar.php`
+- **Transacciones**: `/api/transacciones/registrar.php`
+- **Wallet**: `/api/wallet/portfolio.php`
 
 ### **Blockchain Layer**
 ```rust
@@ -189,19 +198,20 @@ npm run dev
 cd ../backend
 # Configure database in config/db.php
 # Import database structure from sql/estructura.sql
+# Database includes: admins, wallets, terrenos, propuestas, transacciones, disputas, notificaciones
 ```
 
 ### **Environment Setup**
 ```bash
 # Frontend (.env)
-VITE_BACKEND_URL=http://localhost/Atom/backend/api
+VITE_BACKEND_URL=https://atomlink.pro/backend/api
 VITE_STELLAR_NETWORK=testnet
 
 # Backend (config/db.php)
-DB_HOST=localhost
-DB_NAME=atomlink
-DB_USER=your_username
-DB_PASS=your_password
+$host = 'localhost';
+$user = 'atomlink_brunixso';
+$password = 'Brn08a19!';
+$dbname = 'atomlink_all';
 ```
 
 ---
@@ -272,9 +282,9 @@ DB_PASS=your_password
 
 ### **Technical Metrics**
 - ⚡ **Transaction Speed**: <3 seconds
-- 💰 **Transaction Cost**: <$0.01
-- 🔒 **Security**: 100% uptime target
-- 📊 **Scalability**: 10,000+ TPS capacity
+- 💰 **Transaction Cost**: <$0.01 (Stellar Network)
+- 🔒 **Security**: MySQL + PHP prepared statements
+- 📊 **Scalability**: JSON-based flexible data storage
 
 ### **Business Metrics**
 - 🎯 **Assets Tokenized**: $10M+ in first year
