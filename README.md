@@ -210,7 +210,7 @@ VITE_STELLAR_NETWORK=testnet
 # Backend (config/db.php)
 $host = 'localhost';
 $user = 'atomlink_brunixso';
-$password = 'Brn08a19!';
+$password = '(private)';
 $dbname = 'atomlink_all';
 ```
 
