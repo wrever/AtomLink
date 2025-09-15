@@ -1,0 +1,37 @@
+# Contratos Stellar Desplegados en Testnet
+
+## Contrato Ultra Minimal
+- Dirección: CD56STGQQIRK4INUQNVDWJIUKN2SFNGRGBV34QQPBYKXWY5AECASGYRI
+- Funciones: add
+- Estado: ✅ Desplegado y funcionando
+
+## Contrato Land Token
+- Dirección: CB2U5RWNYTWGAU2T2CQVJVK7ZADUNEM3QCVQWIVL6ES7Y3FNAEYRQCPY
+- Funciones: initialize, create_land, get_land, transfer_land, get_owner_lands, get_land_count
+- Estado: ✅ Desplegado y funcionando
+
+## Contrato Marketplace
+- Dirección: CD7FJRQ2LKKW5LIFIMXNFPUHLZXCLVDPYIZHOGYCLC5P4M4OWMLZ3XS4
+- Funciones: initialize, list_land, buy_land, cancel_sale, get_sale_info, get_all_sales, get_seller_sales, get_buyer_purchases, is_land_for_sale
+- Estado: ✅ Desplegado y funcionando
+
+## Pruebas Realizadas
+1. ✅ Contrato ultra-minimal: función add(5, 3) = 8
+2. ✅ Contrato land-token: 
+   - Inicialización exitosa
+   - Creación de terreno con ID 1
+   - Consulta de información del terreno
+3. ✅ Contrato marketplace:
+   - Inicialización exitosa
+   - Listado de terreno con ID 1 para venta
+   - Consulta de información de venta
+
+## Red
+- Red: Stellar Testnet
+- RPC: https://soroban-testnet.stellar.org:443
+- Cuenta deployer: SDQJBBBL2D34KEKP4TXE4JKZA73V5CZKFU5TIA77O27AIQPLBKJUFTOP
+
+## Próximos Pasos
+1. Desplegar contrato marketplace
+2. Integrar contratos con el frontend
+3. Probar funcionalidades completas

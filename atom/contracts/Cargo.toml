@@ -1,0 +1,27 @@
+[workspace]
+resolver = "2"
+members = [
+    "land-tokenization",
+    "land-tokenization-simple",
+    "marketplace",
+    "marketplace-simple",
+    "interfaces",
+    "simple-test",
+    "minimal-test",
+    "ultra-minimal",
+    "land-token",
+    "marketplace-with-payment"
+]
+
+[profile.release]
+overflow-checks = true
+debug = 0
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+
+[profile.release-with-logs]
+inherits = "release"
+debug = 2

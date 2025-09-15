@@ -1,0 +1,331 @@
+/* Team Section Styles - Replicating the original design */
+.team-section {
+  background: #0d141f;
+  padding: 3rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-container {
+  max-width: 48rem; /* max-w-3xl */
+  margin: 0 auto;
+  padding: 0 2rem; /* px-8 */
+}
+
+.team-title {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 700; /* font-bold */
+  color: #ffffff;
+  margin-bottom: 2rem; /* mb-8 */
+  text-align: center;
+  background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 50%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.team-subtitle {
+  font-size: 1.1rem;
+  color: #b6c2d1;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* mt-6 */
+}
+
+.team-category {
+  text-align: left;
+}
+
+.team-category-title {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 500; /* font-medium */
+  color: #ffffff;
+  margin-bottom: 1.5rem; /* mb-6 */
+  text-align: center;
+  position: relative;
+}
+
+.team-category-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+  border-radius: 1px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas para centrar */
+  gap: 2rem; /* gap-4 */
+  padding-top: 1.5rem; /* py-6 */
+  border-top: 1px solid #232b3b; /* border-t */
+  justify-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+.team-member-avatar {
+  width: 5rem; /* size-20 */
+  height: 5rem; /* size-20 */
+  border-radius: 50%; /* rounded-full */
+  border: 2px solid #38bdf8; /* border */
+  padding: 2px; /* p-0.5 */
+  background: #0d141f; /* bg-background */
+  box-shadow: 0 4px 20px rgba(56, 189, 248, 0.2); /* shadow shadow-zinc-950/5 */
+  margin-bottom: 0.5rem; /* mt-2 */
+  transition: all 0.3s ease;
+}
+
+.team-member:hover .team-member-avatar {
+  box-shadow: 0 8px 30px rgba(56, 189, 248, 0.4);
+  border-color: #0ea5e9;
+}
+
+.team-member-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; /* rounded-full */
+  object-fit: cover; /* object-cover */
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover .team-member-image {
+  transform: scale(1.05);
+}
+
+.team-member-name {
+  display: block; /* block */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.team-member-role {
+  display: block; /* block */
+  font-size: 0.75rem; /* text-xs */
+  color: #b6c2d1; /* text-muted-foreground */
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.team-member-social {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.team-social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #1a202c;
+  border: 1px solid #232b3b;
+  color: #b6c2d1;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.team-social-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+}
+
+.team-social-github:hover {
+  background: #333;
+  border-color: #38bdf8;
+  color: #38bdf8;
+}
+
+.team-social-twitter:hover {
+  background: #1da1f2;
+  border-color: #1da1f2;
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .team-section {
+    padding: 8rem 0; /* md:py-32 */
+  }
+  
+  .team-container {
+    padding: 0; /* lg:px-0 */
+  }
+  
+  .team-title {
+    font-size: 2.5rem; /* md:text-5xl */
+    margin-bottom: 4rem; /* md:mb-16 */
+  }
+  
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr); /* Mantener 3 columnas centradas */
+  }
+  
+  .team-member-avatar {
+    width: 5rem; /* size-20 */
+    height: 5rem; /* size-20 */
+  }
+}
+
+@media (min-width: 1024px) {
+  .team-title {
+    font-size: 3rem; /* lg:text-5xl */
+  }
+}
+
+@media (max-width: 1024px) {
+  .team-section {
+    padding: 4rem 0;
+  }
+  
+  .team-title {
+    font-size: 2rem;
+  }
+  
+  .team-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .team-categories {
+    gap: 2.5rem;
+  }
+  
+  .team-grid {
+    gap: 1.5rem;
+  }
+  
+  .team-member-avatar {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-section {
+    padding: 3rem 0;
+  }
+  
+  .team-container {
+    padding: 0 1rem;
+  }
+  
+  .team-title {
+    font-size: 1.75rem;
+  }
+  
+  .team-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+  
+  .team-categories {
+    gap: 2rem;
+  }
+  
+  .team-category-title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .team-grid {
+    gap: 1.25rem;
+    padding-top: 1rem;
+  }
+  
+  .team-member-avatar {
+    width: 4rem;
+    height: 4rem;
+  }
+  
+  .team-member-name {
+    font-size: 0.8rem;
+  }
+  
+  .team-member-role {
+    font-size: 0.7rem;
+  }
+  
+  .team-social-btn {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-section {
+    padding: 2.5rem 0;
+  }
+  
+  .team-title {
+    font-size: 1.5rem;
+  }
+  
+  .team-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .team-categories {
+    gap: 1.5rem;
+  }
+  
+  .team-category-title {
+    font-size: 0.95rem;
+  }
+  
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 300px;
+  }
+  
+  .team-member-avatar {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  
+  .team-member-name {
+    font-size: 0.75rem;
+  }
+  
+  .team-member-role {
+    font-size: 0.65rem;
+  }
+  
+  .team-social-btn {
+    width: 26px;
+    height: 26px;
+  }
+}

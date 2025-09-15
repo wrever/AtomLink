@@ -1,0 +1,235 @@
+/* Partners Carousel Styles */
+.partners-carousel-root {
+  width: 100%;
+  padding: 5rem 0;
+  background: #0d141f;
+}
+
+.partners-carousel-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.partners-carousel-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.partners-carousel-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.partners-carousel-description {
+  color: #d1d5db;
+  font-size: 1.125rem;
+  max-width: 42rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.partners-carousel-slider-container {
+  margin-top: 2rem;
+}
+
+.partners-carousel-slider {
+  width: 100%;
+  height: 5rem;
+  background: #0d141f;
+}
+
+.partners-carousel-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  padding: 0 3rem;
+}
+
+.partners-carousel-logo {
+  height: 50px;
+  width: auto;
+  max-width: 250px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  object-fit: contain;
+}
+
+.partners-carousel-logo:hover {
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .partners-carousel-container {
+    max-width: 1000px;
+  }
+  
+  .partners-carousel-item {
+    padding: 0 2.5rem;
+  }
+  
+  .partners-carousel-logo {
+    height: 45px;
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .partners-carousel-root {
+    padding: 4rem 0;
+  }
+  
+  .partners-carousel-container {
+    padding: 0 1.5rem;
+  }
+  
+  .partners-carousel-title {
+    font-size: 2rem;
+  }
+  
+  .partners-carousel-description {
+    font-size: 1rem;
+  }
+  
+  .partners-carousel-item {
+    padding: 0 2rem;
+  }
+  
+  .partners-carousel-logo {
+    height: 42px;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .partners-carousel-root {
+    padding: 3rem 0;
+  }
+  
+  .partners-carousel-container {
+    padding: 0 1rem;
+  }
+  
+  .partners-carousel-header {
+    margin-bottom: 2rem;
+  }
+  
+  .partners-carousel-title {
+    font-size: 1.8rem;
+  }
+  
+  .partners-carousel-description {
+    font-size: 0.95rem;
+  }
+  
+  .partners-carousel-slider {
+    height: 4rem;
+  }
+  
+  .partners-carousel-item {
+    height: 4rem;
+    padding: 0 1.5rem;
+  }
+  
+  .partners-carousel-logo {
+    height: 38px;
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 640px) {
+  .partners-carousel-root {
+    padding: 2.5rem 0;
+  }
+  
+  .partners-carousel-container {
+    padding: 0 0.8rem;
+  }
+  
+  .partners-carousel-title {
+    font-size: 1.6rem;
+  }
+  
+  .partners-carousel-description {
+    font-size: 0.9rem;
+  }
+  
+  .partners-carousel-slider {
+    height: 3.5rem;
+  }
+  
+  .partners-carousel-item {
+    height: 3.5rem;
+    padding: 0 1.2rem;
+  }
+  
+  .partners-carousel-logo {
+    height: 32px;
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .partners-carousel-root {
+    padding: 2rem 0;
+  }
+  
+  .partners-carousel-container {
+    padding: 0 0.5rem;
+  }
+  
+  .partners-carousel-title {
+    font-size: 1.4rem;
+  }
+  
+  .partners-carousel-description {
+    font-size: 0.85rem;
+  }
+  
+  .partners-carousel-slider {
+    height: 3rem;
+  }
+  
+  .partners-carousel-item {
+    height: 3rem;
+    padding: 0 1rem;
+  }
+  
+  .partners-carousel-logo {
+    height: 28px;
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 360px) {
+  .partners-carousel-root {
+    padding: 1.5rem 0;
+  }
+  
+  .partners-carousel-title {
+    font-size: 1.2rem;
+  }
+  
+  .partners-carousel-description {
+    font-size: 0.8rem;
+  }
+  
+  .partners-carousel-slider {
+    height: 2.5rem;
+  }
+  
+  .partners-carousel-item {
+    height: 2.5rem;
+    padding: 0 0.8rem;
+  }
+  
+  .partners-carousel-logo {
+    height: 24px;
+    max-width: 100px;
+  }
+}

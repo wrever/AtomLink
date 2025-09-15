@@ -1,0 +1,159 @@
+.loader-bg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #111827;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.2rem;
+}
+
+.loader-logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.loader-logo-link:hover {
+  transform: scale(1.05);
+}
+
+.loader-logo {
+  width: 350px;
+  height: 80px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 16px #38bdf8cc);
+  animation: glowLogo 2.5s ease-in-out infinite alternate;
+  transition: all 0.3s ease;
+}
+
+.loader-spinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #232b3b;
+  border-top: 5px solid #38bdf8;
+  border-radius: 50%;
+  animation: loaderSpin 1s linear infinite;
+}
+
+@keyframes glowLogo {
+  0% {
+    filter: drop-shadow(0 2px 16px #38bdf8cc);
+  }
+  100% {
+    filter: drop-shadow(0 2px 24px #38bdf8ff);
+  }
+}
+
+@keyframes rotateLogo {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loaderSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .loader-logo {
+    width: 300px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .loader-logo {
+    width: 280px;
+    height: 65px;
+  }
+  
+  .loader-spinner {
+    width: 44px;
+    height: 44px;
+    border-width: 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  .loader-content {
+    gap: 1.8rem;
+  }
+  
+  .loader-logo {
+    width: 240px;
+    height: 55px;
+  }
+  
+  .loader-spinner {
+    width: 40px;
+    height: 40px;
+    border-width: 4px;
+  }
+}
+
+@media (max-width: 640px) {
+  .loader-logo {
+    width: 200px;
+    height: 45px;
+  }
+  
+  .loader-content {
+    gap: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .loader-content {
+    gap: 1.5rem;
+  }
+  
+  .loader-logo {
+    width: 160px;
+    height: 35px;
+  }
+  
+  .loader-spinner {
+    width: 36px;
+    height: 36px;
+    border-width: 3px;
+  }
+}
+
+@media (max-width: 360px) {
+  .loader-logo {
+    width: 140px;
+    height: 30px;
+  }
+  
+  .loader-content {
+    gap: 1.2rem;
+  }
+  
+  .loader-spinner {
+    width: 32px;
+    height: 32px;
+    border-width: 3px;
+  }
+}

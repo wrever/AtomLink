@@ -1,0 +1,312 @@
+.tokenize-main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 4rem 1rem;
+}
+
+.tokenize-title {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.tokenize-sub {
+  color: #b6c2d1;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+}
+
+.tokenize-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.tokenize-tab {
+  flex: 1;
+  background: #232b3b;
+  color: #b6c2d1;
+  border: none;
+  border-radius: 8px 8px 0 0;
+  padding: 0.9rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  outline: none;
+  border-bottom: 2.5px solid transparent;
+}
+
+.tokenize-tab.active {
+  background: #181f2a;
+  color: #38bdf8;
+  border-bottom: 2.5px solid #38bdf8;
+}
+
+.tokenize-form {
+  background: #181f2a;
+  border: 1.5px solid #232b3b;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px 0 #0002;
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.tokenize-form-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.2rem;
+}
+
+.tokenize-form-sub {
+  color: #b6c2d1;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tokenize-label {
+  color: #b6c2d1;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  display: block;
+}
+
+.tokenize-input, .tokenize-select, .tokenize-textarea {
+  width: 100%;
+  background: #232b3b;
+  color: #e5e7eb;
+  border: 1.5px solid #232b3b;
+  border-radius: 8px;
+  font-size: 1rem;
+  padding: 0.9rem 1.2rem;
+  margin-bottom: 1.2rem;
+  outline: none;
+  transition: border 0.2s;
+  resize: none;
+}
+
+.tokenize-input:focus, .tokenize-select:focus, .tokenize-textarea:focus {
+  border: 1.5px solid #38bdf8;
+}
+
+.tokenize-row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.tokenize-row > * {
+  flex: 1;
+}
+
+.tokenize-upload {
+  border: 2px dashed #232b3b;
+  border-radius: 12px;
+  background: #232b3b;
+  color: #b6c2d1;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-bottom: 1.2rem;
+  cursor: pointer;
+  transition: border 0.2s, background 0.2s;
+}
+
+.tokenize-upload.dragover {
+  border: 2px solid #38bdf8;
+  background: #181f2a;
+}
+
+.tokenize-upload svg {
+  margin-bottom: 0.5rem;
+  color: #38bdf8;
+}
+
+.tokenize-btn {
+  width: 100%;
+  background: #38bdf8;
+  color: #181f2a;
+  border: none;
+  border-radius: 8px;
+  padding: 1.1rem 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.tokenize-btn:hover {
+  background: #0ea5e9;
+  color: #fff;
+  transform: scale(1.02);
+}
+
+.tokenize-list-input-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.2rem;
+}
+.tokenize-list-input-row .tokenize-input {
+  flex: 1;
+  margin-bottom: 0;
+}
+.tokenize-list-input-row .tokenize-add-btn {
+  margin-left: 0;
+  padding: 8px 18px;
+  background: #38bdf8;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px #38bdf822;
+  transition: background 0.2s;
+  height: 42px;
+  display: flex;
+  align-items: center;
+}
+.tokenize-list-input-row .tokenize-add-btn:hover {
+  background: #0ea5e9;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .tokenize-main {
+    padding: 2rem 1rem 3rem 1rem;
+  }
+  
+  .tokenize-title {
+    font-size: 2rem;
+  }
+  
+  .tokenize-form {
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+  }
+  
+  .tokenize-form-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tokenize-main {
+    padding: 1.5rem 0.8rem 2.5rem 0.8rem;
+  }
+  
+  .tokenize-title {
+    font-size: 1.8rem;
+  }
+  
+  .tokenize-sub {
+    font-size: 1rem;
+  }
+  
+  .tokenize-tabs {
+    gap: 0.3rem;
+  }
+  
+  .tokenize-tab {
+    font-size: 1rem;
+    padding: 0.8rem 0;
+  }
+  
+  .tokenize-form {
+    padding: 1.5rem 1rem 1rem 1rem;
+  }
+  
+  .tokenize-form-title {
+    font-size: 1.1rem;
+  }
+  
+  .tokenize-form-sub {
+    font-size: 0.9rem;
+  }
+  
+  .tokenize-label {
+    font-size: 0.9rem;
+  }
+  
+  .tokenize-input, .tokenize-select, .tokenize-textarea {
+    font-size: 0.9rem;
+    padding: 0.8rem 1rem;
+  }
+  
+  .tokenize-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .tokenize-upload {
+    padding: 1.5rem 0.8rem;
+  }
+  
+  .tokenize-btn {
+    padding: 1rem 0;
+    font-size: 1.1rem;
+  }
+  .tokenize-list-input-row {
+    flex-direction: row;
+    gap: 6px;
+  }
+  .tokenize-list-input-row .tokenize-add-btn {
+    padding: 7px 12px;
+    font-size: 0.95rem;
+    height: 38px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tokenize-main {
+    padding: 1rem 0.5rem 2rem 0.5rem;
+  }
+  
+  .tokenize-title {
+    font-size: 1.6rem;
+  }
+  
+  .tokenize-sub {
+    font-size: 0.9rem;
+  }
+  
+  .tokenize-tabs {
+    gap: 0.2rem;
+  }
+  
+  .tokenize-tab {
+    font-size: 0.9rem;
+    padding: 0.7rem 0;
+  }
+  
+  .tokenize-form {
+    padding: 1.2rem 0.8rem 0.8rem 0.8rem;
+  }
+  
+  .tokenize-form-title {
+    font-size: 1rem;
+  }
+  
+  .tokenize-form-sub {
+    font-size: 0.85rem;
+  }
+  
+  .tokenize-label {
+    font-size: 0.85rem;
+  }
+  
+  .tokenize-input, .tokenize-select, .tokenize-textarea {
+    font-size: 0.85rem;
+    padding: 0.7rem 0.8rem;
+  }
+  
+  .tokenize-upload {
+    padding: 1.2rem 0.6rem;
+  }
+  
+  .tokenize-btn {
+    padding: 0.9rem 0;
+    font-size: 1rem;
+  }
+} 

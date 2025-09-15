@@ -1,0 +1,39 @@
+/* --------- Variables --------- */
+:root {
+  --color-primary: #38bdf8; /* Celeste vibrante */
+  --color-bg: #181f2a;      /* Azul oscuro principal */
+  --color-bg-light: #232b3b;/* Azul grisáceo para secciones */
+  --color-text: #e5e7eb;    /* Gris claro */
+  --color-header-bg: #1a2233; /* Navbar y footer */
+  --color-border: #283046;  /* Bordes sutiles */
+  --radius: 12px;
+  --shadow: 0 2px 16px rgba(0,0,0,0.18);
+}
+
+/* --------- Reset --------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+main {
+  flex: 1;
+} 

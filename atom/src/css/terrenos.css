@@ -1,0 +1,284 @@
+.terrenos-main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 4rem 1rem;
+}
+
+.terrenos-title {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.terrenos-sub {
+  color: #b6c2d1;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+}
+
+.terrenos-searchbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.terrenos-search {
+  flex: 1;
+  background: #181f2a;
+  border: 1px solid #232b3b;
+  border-radius: 8px;
+  color: #e5e7eb;
+  font-size: 1rem;
+  padding: 0.9rem 1.2rem;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.terrenos-search:focus {
+  border: 1.5px solid #38bdf8;
+}
+
+.terrenos-filters-btn {
+  background: #232b3b;
+  color: #b6c2d1;
+  border: 1px solid #232b3b;
+  border-radius: 8px;
+  padding: 0.9rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: border 0.2s, color 0.2s;
+}
+
+.terrenos-filters-btn:hover {
+  border: 1.5px solid #38bdf8;
+  color: #38bdf8;
+}
+
+.terrenos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.terreno-mp-card {
+  background: #181f2a;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px #0002;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s;
+  border: 1.5px solid #232b3b;
+}
+.terreno-mp-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 6px 32px #0004;
+}
+
+.terreno-mp-img {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  background: #222;
+}
+.terreno-mp-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.terreno-mp-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 4px 14px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  background: #38bdf822;
+  color: #38bdf8;
+  letter-spacing: 0.5px;
+}
+.terreno-mp-badge.agro { background: #22c55e22; color: #22c55e; }
+.terreno-mp-badge.real { background: #3b82f622; color: #3b82f6; }
+.terreno-mp-badge.energy { background: #f59e0b22; color: #f59e0b; }
+
+.terreno-mp-content {
+  padding: 20px 20px 16px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.terreno-mp-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #fff;
+}
+.terreno-mp-desc {
+  color: #b0b8c9;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  min-height: 40px;
+}
+.terreno-mp-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.terreno-mp-label {
+  color: #7b8794;
+  font-size: 13px;
+}
+.terreno-mp-value {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+}
+.terreno-mp-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+.terreno-mp-btn {
+  flex: 1;
+  padding: 10px 0;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  background: #22c55e;
+  color: #fff;
+  transition: background 0.15s;
+}
+.terreno-mp-btn.detalles {
+  background: #232b3b;
+  color: #38bdf8;
+  border: 1.5px solid #38bdf8;
+}
+.terreno-mp-btn:hover {
+  filter: brightness(1.08);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .terrenos-main {
+    padding: 2rem 1rem 3rem 1rem;
+  }
+  
+  .terrenos-title {
+    font-size: 2rem;
+  }
+  
+  .terrenos-grid {
+    gap: 2rem;
+  }
+  
+  .terreno-mp-card {
+    min-height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .terrenos-main {
+    padding: 1.5rem 0.8rem 2.5rem 0.8rem;
+  }
+  
+  .terrenos-title {
+    font-size: 1.8rem;
+  }
+  
+  .terrenos-sub {
+    font-size: 1rem;
+  }
+  
+  .terrenos-searchbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .terrenos-search {
+    width: 100%;
+  }
+  
+  .terrenos-filters-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .terrenos-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .terreno-mp-card {
+    min-height: 420px;
+  }
+  
+  .terreno-mp-content {
+    padding: 1.2rem 1.2rem 0.5rem 1.2rem;
+  }
+  
+  .terreno-mp-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .terreno-mp-actions {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .terrenos-main {
+    padding: 1rem 0.5rem 2rem 0.5rem;
+  }
+  
+  .terrenos-title {
+    font-size: 1.6rem;
+  }
+  
+  .terrenos-sub {
+    font-size: 0.9rem;
+  }
+  
+  .terreno-mp-card {
+    min-height: 400px;
+  }
+  
+  .terreno-mp-img {
+    height: 150px;
+  }
+  
+  .terreno-mp-img svg {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .terreno-mp-content {
+    padding: 1rem 1rem 0.5rem 1rem;
+  }
+  
+  .terreno-mp-title {
+    font-size: 1.1rem;
+  }
+  
+  .terreno-mp-desc {
+    font-size: 0.9rem;
+  }
+  
+  .terreno-mp-btn {
+    font-size: 1rem;
+    padding: 0.8rem 0;
+  }
+} 

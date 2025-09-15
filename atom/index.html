@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./src/img/conceptatom.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AtomLink | RWA</title>
+    <script>
+      // Polyfill para global
+      if (typeof global === 'undefined') {
+        window.global = globalThis;
+      }
+      
+      // Polyfill para process
+      if (typeof process === 'undefined') {
+        window.process = {
+          env: {},
+          version: '',
+          versions: {},
+          platform: 'browser',
+          nextTick: (fn) => setTimeout(fn, 0)
+        };
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

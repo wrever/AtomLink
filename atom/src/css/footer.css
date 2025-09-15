@@ -1,0 +1,349 @@
+/* Footer Styles */
+.main-footer {
+  background: #111827;
+  color: #b6c2d1;
+  padding: 3rem 0 1.2rem 0;
+  border-top: 1.5px solid #232b3b;
+  font-size: 16px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 1.5rem;
+}
+
+.footer-logo-section {
+  flex: 1;
+  min-width: 220px;
+  margin-bottom: 24px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.footer-logo:hover {
+  transform: scale(1.05);
+}
+
+.footer-logo-img {
+  width: 250px;
+  height: 55px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 8px #38bdf855);
+}
+
+.footer-description {
+  color: #b6c2d1;
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 16px;
+  font-size: 22px;
+}
+
+.footer-social-link {
+  color: #b6c2d1;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-social-link:hover {
+  color: #38bdf8;
+}
+
+/* Footer Bottom - Copyright y Políticas */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.5rem;
+  gap: 20px;
+}
+
+.footer-copyright {
+  font-size: 15px;
+  color: #b6c2d1;
+  text-align: center;
+}
+
+.footer-policies {
+  display: flex;
+  gap: 18px;
+  font-size: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-policy-link {
+  color: #b6c2d1;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-policy-link:hover {
+  color: #38bdf8;
+}
+
+/* Estilos para centrar enlaces y elementos de contacto en móviles */
+@media (max-width: 1024px) {
+  .footer-content a {
+    display: block;
+    margin: 0 auto 6px auto;
+    text-align: center;
+  }
+  
+  .footer-content div[style*="display: flex"] {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .footer-logo-img {
+    width: 220px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer-content {
+    padding: 0 1rem;
+    gap: 24px;
+    align-items: center;
+  }
+  
+  .footer-logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-logo {
+    justify-content: center;
+  }
+  
+  .footer-logo-img {
+    width: 200px;
+    height: 44px;
+  }
+  
+  /* Centrar todas las secciones del footer */
+  .footer-content > div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Footer bottom responsivo */
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  
+  .footer-policies {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 1rem;
+    align-items: center;
+  }
+  
+  .footer-logo-section {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-logo {
+    justify-content: center;
+  }
+  
+  .footer-logo-img {
+    width: 180px;
+    height: 40px;
+  }
+  
+  /* Centrar todas las secciones del footer */
+  .footer-content > div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  /* Footer bottom responsivo */
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .footer-policies {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-content {
+    padding: 0 0.8rem;
+    align-items: center;
+  }
+  
+  .footer-logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-logo {
+    justify-content: center;
+  }
+  
+  .footer-logo-img {
+    width: 160px;
+    height: 35px;
+  }
+  
+  /* Centrar todas las secciones del footer */
+  .footer-content > div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+  
+  /* Footer bottom responsivo */
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+  
+  .footer-policies {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    padding: 0 0.5rem;
+    gap: 16px;
+    align-items: center;
+  }
+  
+  .footer-logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-logo {
+    justify-content: center;
+  }
+  
+  .footer-logo-img {
+    width: 140px;
+    height: 30px;
+  }
+  
+  .main-footer {
+    padding: 2rem 0 1rem 0;
+  }
+  
+  /* Centrar todas las secciones del footer */
+  .footer-content > div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  /* Footer bottom responsivo */
+  .footer-bottom {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+  }
+  
+  .footer-policies {
+    gap: 6px;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer-content {
+    padding: 0 0.3rem;
+    align-items: center;
+  }
+  
+  .footer-logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-logo {
+    justify-content: center;
+  }
+  
+  .footer-logo-img {
+    width: 120px;
+    height: 26px;
+  }
+  
+  /* Centrar todas las secciones del footer */
+  .footer-content > div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Footer bottom responsivo */
+  .footer-bottom {
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+  }
+  
+  .footer-policies {
+    gap: 4px;
+  }
+}
