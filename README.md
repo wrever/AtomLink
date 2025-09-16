@@ -294,15 +294,6 @@ $dbname = 'atomlink_all';
 
 ---
 
-## Awards & Recognition
-
-- **Meridian 2025 Hackathon** - Grand Prize Winner
-- **Stellar Community** - Featured Project
-- **Industry Recognition** - RWA Innovation Award
-- **Media Coverage** - TechCrunch, CoinDesk
-
----
-
 ## Partnerships
 
 ### Strategic Partners
