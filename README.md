@@ -1,4 +1,4 @@
-# AtomLink - Real-World Asset Tokenization Platform
+# AtomLink | Real-World Asset Tokenization Platform
 
 > **Meridian 2025 Hackathon Submission**  
 > *Transforming Real-World Assets into Digital Tokens on Stellar Network*
@@ -32,7 +32,7 @@ AtomLink is a **next-generation RWA (Real-World Asset) tokenization platform** b
 We're the **first platform** to combine:
 - **Stellar Network** for ultra-low fees and fast transactions
 - **Soroban Smart Contracts** for advanced asset management
-- **Multi-asset support** (Mining, Real Estate, Agriculture, Energy)
+- **Multi-lands support** (Mining, Real Estate, Agriculture, Energy)
 - **Fractional ownership** with real-time trading
 - **Regulatory compliance** built-in
 
@@ -109,8 +109,8 @@ Stellar Network + Soroban
 ## Business Model & Market Opportunity
 
 ### Revenue Streams
-1. **Tokenization Fees**: 2-5% of asset value
-2. **Trading Fees**: 0.5% per transaction
+1. **Tokenization Fees**: 1% of asset value (for mining companies)
+2. **Trading Fees**: 1.5% per transaction (buy tokens)
 3. **Premium Services**: Advanced analytics, legal support
 4. **API Licensing**: White-label solutions for institutions
 
@@ -131,13 +131,13 @@ Stellar Network + Soroban
 ## Target Market
 
 ### Primary Users
-- **Mining Companies**: Tokenize assets for capital raising
+- **Mining Companies**: Tokenize lands for capital raising
 - **Retail Investors**: Access previously unavailable assets
 - **Real Estate Developers**: Fractionalize properties
 - **Agricultural Cooperatives**: Tokenize farmland
 
 ### Geographic Focus
-- **Phase 1**: Latin America (Argentina, Chile, Peru)
+- **Phase 1**: Latin America (Argentina, Chile, Peru, Bolivia)
 - **Phase 2**: North America & Europe
 - **Phase 3**: Global expansion
 
@@ -146,9 +146,9 @@ Stellar Network + Soroban
 ## Why We'll Win Meridian 2025
 
 ### 1. Technical Excellence
-- **Production-ready code** (100+ files, thousands of lines)
-- **Multi-blockchain integration** (Stellar + Ethereum)
-- **Advanced smart contracts** (10+ contracts deployed)
+- **Production-ready code** (30+ files, thousands of lines)
+- **Blockchain integration** (Stellar)
+- **Advanced smart contracts** (1+ contracts deployed)
 - **Scalable architecture** (handles millions of transactions)
 
 ### 2. Real-World Impact
