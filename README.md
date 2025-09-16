@@ -262,22 +262,6 @@ $dbname = 'atomlink_all';
 
 ---
 
-## Team
-
-### Core Team
-- **Lead Developer**: Full-stack blockchain developer
-- **Smart Contract Engineer**: Stellar/Soroban specialist
-- **UI/UX Designer**: Modern, intuitive interfaces
-- **Business Development**: Market expansion expert
-
-### Advisors
-- **Blockchain Expert**: Stellar Network specialist
-- **Legal Counsel**: RWA regulatory compliance
-- **Mining Industry**: 20+ years experience
-- **Financial Services**: Traditional finance background
-
----
-
 ## Metrics & KPIs
 
 ### Technical Metrics
