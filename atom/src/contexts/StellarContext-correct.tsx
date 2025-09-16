@@ -44,8 +44,10 @@ export const StellarProvider: React.FC<StellarProviderProps> = ({ children }) =>
   useEffect(() => {
     const initializeKit = async () => {
       try {
+        console.log('🔍 Inicializando Stellar Wallets Kit...');
         
         const networkConfig = getCurrentNetworkConfig();
+        console.log('🔍 Network config:', networkConfig);
         
         // Crear el kit con todos los módulos disponibles
         const newKit = new StellarWalletsKit({
@@ -53,24 +55,30 @@ export const StellarProvider: React.FC<StellarProviderProps> = ({ children }) =>
           modules: allowAllModules(),
         });
         
+        console.log('🔍 Kit creado:', newKit);
         setKit(newKit);
         
         // Verificar si ya hay wallets conectadas
         try {
           const connectedWallets = await newKit.getConnectedWallets();
+          console.log('🔍 Wallets conectadas:', connectedWallets);
           
           if (connectedWallets && connectedWallets.length > 0) {
             const wallet = connectedWallets[0];
+            console.log('🔍 Wallet encontrada:', wallet);
             setIsConnected(true);
             setAddress(wallet.publicKey);
             setSelectedWallet(wallet.id);
           }
         } catch (walletError) {
+          console.log('🔍 No hay wallets conectadas:', walletError);
         }
         
         setIsInitializing(false);
+        console.log('✅ Stellar Wallets Kit inicializado correctamente');
         
       } catch (error) {
+        console.error('❌ Error inicializando kit:', error);
         setIsInitializing(false);
       }
     };
@@ -84,10 +92,12 @@ export const StellarProvider: React.FC<StellarProviderProps> = ({ children }) =>
     }
 
     try {
+      console.log('🔍 Abriendo modal de selección de wallet...');
       
       // Usar el modal integrado del kit
       await kit.openModal({
         onWalletSelected: async (option) => {
+          console.log('🔍 Wallet seleccionada:', option);
           
           // Configurar la wallet seleccionada
           await kit.setWallet(option.id);
@@ -95,23 +105,29 @@ export const StellarProvider: React.FC<StellarProviderProps> = ({ children }) =>
           
           // Obtener la dirección
           const { address: walletAddress } = await kit.getAddress();
+          console.log('🔍 Dirección obtenida:', walletAddress);
           
           setIsConnected(true);
           setAddress(walletAddress);
+          console.log('✅ Wallet conectada exitosamente');
         },
         onClosed: (err) => {
           if (err) {
+            console.error('❌ Modal cerrado con error:', err);
           } else {
+            console.log('🔍 Modal cerrado sin selección');
           }
         }
       });
       
     } catch (error) {
+      console.error('❌ Error conectando wallet:', error);
       throw error;
     }
   };
 
   const disconnectWallet = async () => {
+    console.log('🔍 Desconectando wallet...');
     
     if (kit && selectedWallet) {
       try {
@@ -119,6 +135,7 @@ export const StellarProvider: React.FC<StellarProviderProps> = ({ children }) =>
         await kit.setWallet(selectedWallet);
         // El kit maneja la desconexión internamente
       } catch (error) {
+        console.error('Error desconectando:', error);
       }
     }
     
@@ -133,21 +150,30 @@ export const StellarProvider: React.FC<StellarProviderProps> = ({ children }) =>
     }
 
     try {
+      console.log('🔍 Firmando transacción...');
+      console.log('🔍 Transaction:', transaction);
+      console.log('🔍 Address:', address);
+      console.log('🔍 Selected Wallet:', selectedWallet);
       
       // Asegurar que la wallet correcta está seleccionada
       await kit.setWallet(selectedWallet);
       
       const xdr = transaction.toXDR();
+      console.log('🔍 XDR creado:', xdr);
       
       const networkConfig = getCurrentNetworkConfig();
+      console.log('🔍 Network passphrase:', networkConfig.networkPassphrase);
       
       const { signedTxXdr } = await kit.signTransaction(xdr, {
+        address: address,
         networkPassphrase: networkConfig.networkPassphrase
       });
       
+      console.log('✅ Transacción firmada exitosamente');
       return signedTxXdr;
       
     } catch (err) {
+      console.error('❌ Error al firmar transacción:', err);
       throw new Error(`Error al firmar la transacción: ${err.message}`);
     }
   };
@@ -199,3 +225,4 @@ export const StellarProvider: React.FC<StellarProviderProps> = ({ children }) =>
     </StellarContext.Provider>
   );
 };
+

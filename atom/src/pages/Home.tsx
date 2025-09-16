@@ -30,7 +30,7 @@ const Home = () => {
       id: 2,
       title: "Mining Rights",
       date: "Q2 2024",
-      content: "Convert mining concessions and extraction rights into tradeable digital assets.",
+      content: "Convert mining concessions and extraction rights into tradeable digital tokens.",
       category: "Mining",
       icon: Mountain,
       relatedIds: [1, 4],
@@ -39,9 +39,9 @@ const Home = () => {
     },
     {
       id: 3,
-      title: "Energy Assets",
+      title: "Energy Territories",
       date: "Q3 2024",
-      content: "Tokenize renewable energy infrastructure, solar farms, and wind projects.",
+      content: "Tokenize renewable energy territories, solar farms, and wind projects.",
       category: "Energy",
       icon: Zap,
       relatedIds: [1, 5],
@@ -52,7 +52,7 @@ const Home = () => {
       id: 4,
       title: "Infrastructure",
       date: "Q4 2024",
-      content: "Digitalize infrastructure projects including roads, bridges, and utilities.",
+      content: "Digitalize infrastructure territories including roads, bridges, and utilities.",
       category: "Infrastructure",
       icon: Factory,
       relatedIds: [2, 6],
@@ -63,7 +63,7 @@ const Home = () => {
       id: 5,
       title: "Agricultural Land",
       date: "Q1 2025",
-      content: "Tokenize farmland, agricultural properties, and crop production rights.",
+      content: "Tokenize farmland, agricultural territories, and crop production rights.",
       category: "Agriculture",
       icon: TreePine,
       relatedIds: [3, 6],
@@ -123,20 +123,20 @@ const Home = () => {
               className="home-hero-title"
               {...fadeInUp}
             >
-              Tokenize Real-World Assets on the Blockchain
+              Tokenize Real-World Lands on the Blockchain
             </motion.h1>
             <motion.p 
               className="home-hero-sub"
               {...fadeInUpDelay(0.2)}
             >
-              Transform agriculture, real estate, and energy assets into tradable digital tokens with AtomLink.
+              Transform mining lands and mineral-rich territories into tradable digital tokens with AtomLink.
             </motion.p>
             <motion.div 
               className="home-hero-btns"
               {...fadeInUpDelay(0.4)}
             >
             <Link to="/terrenos" className="home-btn home-btn-blue">Explore Marketplace</Link>
-            <Link to="/tokenize" className="home-btn home-btn-orange">Tokenize Your Assets</Link>
+            <Link to="/tokenize" className="home-btn home-btn-orange">Tokenize Your Lands</Link>
             </motion.div>
           </div>
           <motion.div 
@@ -485,10 +485,10 @@ const Home = () => {
       {/* HOW IT WORKS */}
       <motion.section className="home-how-it-works" {...scrollFadeIn}>
         <motion.h2 className="home-section-title" {...scrollFadeIn}>
-          The Future of Mining Assets
+          The Future of Mining Lands
         </motion.h2>
         <motion.p className="home-section-sub" {...scrollFadeIn}>
-          A simple process to tokenize and trade real-world assets on the blockchain.
+          A simple process to tokenize and trade real-world lands on the blockchain.
         </motion.p>
         <div className="home-how-cards">
           <motion.div 
@@ -537,7 +537,7 @@ const Home = () => {
               </div>
             </div>
             <div className="home-how-card-content">
-              <div className="home-how-card-title">Tokenize Your Assets</div>
+              <div className="home-how-card-title">Tokenize Your Lands</div>
               <div className="home-how-card-desc">Submit your asset details and documentation for verification and tokenization on the blockchain.</div>
               <div className="home-how-card-metrics">
                 <div className="home-how-metric">
@@ -569,7 +569,7 @@ const Home = () => {
             </div>
             <div className="home-how-card-content">
               <div className="home-how-card-title">Trade & Manage</div>
-              <div className="home-how-card-desc">Buy, sell, or hold tokenized assets in your portfolio with full transparency and real-time tracking.</div>
+              <div className="home-how-card-desc">Buy, sell, or hold tokenized lands in your portfolio with full transparency and real-time tracking.</div>
               <div className="home-how-card-metrics">
                 <div className="home-how-metric">
                   <div className="home-how-metric-label">Trading Volume</div>
@@ -592,7 +592,7 @@ const Home = () => {
          Asset Types
        </motion.h2>
        <motion.p className="home-asset-types-subtitle" {...scrollFadeIn}>
-         Discover the diverse range of real-world assets you can tokenize or invest on our platform.
+         Discover the diverse range of real-world lands you can tokenize or invest on our platform.
        </motion.p>
        <div className="home-asset-types-timeline">
          <RadialOrbitalTimeline timelineData={assetTypesData} />
@@ -604,7 +604,7 @@ const Home = () => {
         <div className="home-call-container">
           <motion.div className="home-call-content" {...scrollFadeIn}>
             <motion.h2 className="home-call-title" {...scrollFadeIn}>
-              Ready to Invest in Mining Assets?
+              Ready to Invest in Mining Lands?
             </motion.h2>
             <motion.p className="home-call-subtitle" {...scrollFadeIn}>
               Join the future of mining investment through blockchain technology. 
@@ -629,8 +629,8 @@ const Home = () => {
                     <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <h3>Verified Assets</h3>
-                <p>All mining assets are verified and backed by real-world operations</p>
+                <h3>Verified Lands</h3>
+                <p>All mining lands are verified and backed by real-world operations</p>
               </div>
               <div className="home-call-feature">
                 <div className="home-call-feature-icon">
@@ -662,7 +662,7 @@ const Home = () => {
         </div>
               <div className="home-call-mining-text">
                 <h3>Mining Operations</h3>
-                <p>Tokenize your mining assets and operations</p>
+                <p>Tokenize your mining lands and operations</p>
         </div>
         </div>
           </motion.div>
@@ -678,7 +678,7 @@ const Home = () => {
           Ready to Get Started?
         </motion.h2>
         <motion.p className="home-cta-sub" {...scrollFadeIn}>
-          Join Atom today and transform how you invest in real-world assets.
+          Join Atom today and transform how you invest in real-world lands.
         </motion.p>
         <motion.div 
           className="home-cta-btns"
@@ -686,7 +686,7 @@ const Home = () => {
           transition={{ delay: 0.2 }}
         >
           <Link to="/terrenos" className="home-btn home-btn-blue">Explore Marketplace</Link>
-          <Link to="/tokenize" className="home-btn home-btn-orange">Tokenize Your Assets</Link>
+          <Link to="/tokenize" className="home-btn home-btn-orange">Tokenize Your Lands</Link>
         </motion.div>
       </motion.section>
     </div>

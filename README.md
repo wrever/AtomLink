@@ -236,25 +236,25 @@ $dbname = 'atomlink_all';
 
 ## Roadmap
 
-### Q1 2025 (Post-Hackathon)
+### Q4 2025 (Post-Hackathon)
 - **Mainnet Launch** on Stellar Network
 - **First Mining Asset** tokenization
 - **Institutional Partnerships** (mining companies)
 - **Mobile App** development
 
-### Q2 2025
+### Q1 2026
 - **Multi-country** expansion
 - **Real Estate** asset class launch
 - **Advanced Analytics** dashboard
 - **Enhanced Compliance** tools
 
-### Q3 2025
+### Q2 2026
 - **Agricultural Assets** tokenization
 - **Energy Projects** integration
 - **AI-powered** asset valuation
 - **Institutional API** launch
 
-### Q4 2025
+### Q3 2026
 - **Global Marketplace** launch
 - **Banking Integration** partnerships
 - **Secondary Market** expansion

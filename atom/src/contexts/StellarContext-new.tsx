@@ -1,12 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { 
-  StellarWalletsKit, 
-  WalletNetwork, 
-  allowAllModules,
-  FREIGHTER_ID,
-  XBULL_ID,
-  ALBEDO_ID
-} from '@creit.tech/stellar-wallets-kit';
+import { StellarWalletsKit } from '@stellar/wallets-kit';
+import { WalletNetwork } from '@stellar/wallets-kit';
 import { getCurrentNetworkConfig } from '../config/stellar';
 
 interface StellarContextType {
@@ -17,7 +11,6 @@ interface StellarContextType {
   signTransaction: (transaction: any) => Promise<string>;
   callContract: (contractAddress: string, functionName: string, args: any[]) => Promise<any>;
   kit: StellarWalletsKit | null;
-  selectedWallet: string | null;
 }
 
 const StellarContext = createContext<StellarContextType | undefined>(undefined);
@@ -38,40 +31,30 @@ export const StellarProvider: React.FC<StellarProviderProps> = ({ children }) =>
   const [kit, setKit] = useState<StellarWalletsKit | null>(null);
   const [isConnected, setIsConnected] = useState(false);
   const [address, setAddress] = useState<string | null>(null);
-  const [selectedWallet, setSelectedWallet] = useState<string | null>(null);
-  const [isInitializing, setIsInitializing] = useState(true);
 
   useEffect(() => {
     const initializeKit = async () => {
       try {
-        
         const networkConfig = getCurrentNetworkConfig();
         
-        // Crear el kit con todos los módulos disponibles
         const newKit = new StellarWalletsKit({
           network: WalletNetwork.TESTNET,
-          modules: allowAllModules(),
+          selectedWalletId: 'freighter',
+          modal: true
         });
         
         setKit(newKit);
         
-        // Verificar si ya hay wallets conectadas
-        try {
-          const connectedWallets = await newKit.getConnectedWallets();
-          
-          if (connectedWallets && connectedWallets.length > 0) {
-            const wallet = connectedWallets[0];
-            setIsConnected(true);
-            setAddress(wallet.publicKey);
-            setSelectedWallet(wallet.id);
-          }
-        } catch (walletError) {
+        const connectedWallets = await newKit.getConnectedWallets();
+        
+        if (connectedWallets.length > 0) {
+          const wallet = connectedWallets[0];
+          setIsConnected(true);
+          setAddress(wallet.publicKey);
         }
         
-        setIsInitializing(false);
-        
       } catch (error) {
-        setIsInitializing(false);
+        console.error('Error inicializando kit:', error);
       }
     };
 
@@ -84,70 +67,46 @@ export const StellarProvider: React.FC<StellarProviderProps> = ({ children }) =>
     }
 
     try {
-      
-      // Usar el modal integrado del kit
-      await kit.openModal({
+      const result = await kit.openModal({
         onWalletSelected: async (option) => {
-          
-          // Configurar la wallet seleccionada
-          await kit.setWallet(option.id);
-          setSelectedWallet(option.id);
-          
-          // Obtener la dirección
-          const { address: walletAddress } = await kit.getAddress();
-          
-          setIsConnected(true);
-          setAddress(walletAddress);
-        },
-        onClosed: (err) => {
-          if (err) {
-          } else {
-          }
+          return option;
         }
       });
       
+      if (result) {
+        setIsConnected(true);
+        setAddress(result.publicKey);
+      }
+      
     } catch (error) {
+      console.error('Error conectando wallet:', error);
       throw error;
     }
   };
 
-  const disconnectWallet = async () => {
-    
-    if (kit && selectedWallet) {
-      try {
-        // Desconectar la wallet específica
-        await kit.setWallet(selectedWallet);
-        // El kit maneja la desconexión internamente
-      } catch (error) {
-      }
-    }
-    
+  const disconnectWallet = () => {
     setIsConnected(false);
     setAddress(null);
-    setSelectedWallet(null);
   };
 
   const signTransaction = async (transaction: any) => {
-    if (!kit || !address || !selectedWallet) {
+    if (!kit || !address) {
       throw new Error('Wallet no conectada');
     }
 
     try {
-      
-      // Asegurar que la wallet correcta está seleccionada
-      await kit.setWallet(selectedWallet);
-      
       const xdr = transaction.toXDR();
-      
       const networkConfig = getCurrentNetworkConfig();
       
-      const { signedTxXdr } = await kit.signTransaction(xdr, {
+      const signedTxXdr = await kit.signTransaction(xdr, {
+        address: address,
         networkPassphrase: networkConfig.networkPassphrase
       });
       
       return signedTxXdr;
       
     } catch (err) {
+      console.error('Error al firmar transacción:', err);
       throw new Error(`Error al firmar la transacción: ${err.message}`);
     }
   };
@@ -170,28 +129,8 @@ export const StellarProvider: React.FC<StellarProviderProps> = ({ children }) =>
     disconnectWallet,
     signTransaction,
     callContract,
-    kit,
-    selectedWallet
+    kit
   };
-
-  // Mostrar loading mientras se inicializa
-  if (isInitializing) {
-    return (
-      <StellarContext.Provider value={value}>
-        <div style={{ 
-          display: 'flex', 
-          justifyContent: 'center', 
-          alignItems: 'center', 
-          height: '100vh',
-          fontSize: '18px',
-          color: '#666'
-        }}>
-          Inicializando Stellar Wallets Kit...
-        </div>
-        {children}
-      </StellarContext.Provider>
-    );
-  }
 
   return (
     <StellarContext.Provider value={value}>
@@ -199,3 +138,4 @@ export const StellarProvider: React.FC<StellarProviderProps> = ({ children }) =>
     </StellarContext.Provider>
   );
 };
+
