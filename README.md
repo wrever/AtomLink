@@ -31,8 +31,13 @@ AtomLink is a **next-generation land tokenization platform** built on Stellar Ne
 ### Key Innovation
 We're the **first platform** to combine:
 - **Stellar Network** for ultra-low fees and fast transactions
+<<<<<<< HEAD
 - **Soroban Smart Contracts** for advanced land management
 - **Multi-lands support** (Mining Lands, Real Estate, Agricultural Lands, Energy Lands)
+=======
+- **Soroban Smart Contracts** for advanced asset management
+- **Multi-lands support** (Mining, Real Estate, Agriculture, Energy)
+>>>>>>> 9d4366515fa3e4bdfe7628197b0e3248bc79c7e9
 - **Fractional ownership** with real-time trading
 - **Regulatory compliance** built-in
 
@@ -109,9 +114,14 @@ Stellar Network + Soroban
 ## Business Model & Market Opportunity
 
 ### Revenue Streams
+<<<<<<< HEAD
 1. **Tokenization Fees**: 1% of asset value (for mining companies, only 1 time)
 2. **Trading Fees**: 1.5% per transaction (buy tokens)
 3. **Distribution Fees**: 0.5% per distribution (profit distribution)
+=======
+1. **Tokenization Fees**: 1% of asset value (for mining companies)
+2. **Trading Fees**: 1.5% per transaction (buy tokens)
+>>>>>>> 9d4366515fa3e4bdfe7628197b0e3248bc79c7e9
 3. **Premium Services**: Advanced analytics, legal support
 4. **API Licensing**: White-label solutions for institutions
 
@@ -133,7 +143,11 @@ Stellar Network + Soroban
 
 ### Primary Users
 - **Mining Companies**: Tokenize lands for capital raising
+<<<<<<< HEAD
 - **Retail Investors**: Access previously unavailable lands
+=======
+- **Retail Investors**: Access previously unavailable assets
+>>>>>>> 9d4366515fa3e4bdfe7628197b0e3248bc79c7e9
 - **Real Estate Developers**: Fractionalize properties
 - **Agricultural Cooperatives**: Tokenize farmland
 
