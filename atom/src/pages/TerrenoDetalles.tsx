@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "../css/terrenoDetalles.css";
 import { useStellar } from "../contexts/StellarContext";
-import { getContractForTerreno, buyTokensSafely, getContractInfo, getRecommendedPrice } from "../contracts/stellarConfig";
+import { getContractForTerreno, buyTokensSafely, getContractInfo } from "../contracts/stellarConfig";
 import * as StellarSdk from '@stellar/stellar-sdk';
 import { Networks } from '@stellar/stellar-sdk';
 
@@ -151,11 +151,40 @@ const TerrenoDetalles = () => {
         
         setMensaje("Procesando transacción...");
         
-        // Simular procesamiento
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        // Convertir el XDR firmado de vuelta a Transaction para enviarlo
+        const transaction = StellarSdk.TransactionBuilder.fromXDR(signedXdr, Networks.TESTNET);
         
-        // Confirmación falsa exitosa
-        setMensaje("¡Transacción completada exitosamente!");
+        // Enviar la transacción usando el RPC
+        const sendResult = await result.rpc.sendTransaction(transaction);
+        
+        if (sendResult.errorResult) {
+          throw new Error(`Error en la transacción: ${sendResult.errorResult}`);
+        }
+        
+        setMensaje("Esperando confirmación de la red...");
+        
+        // Polling para verificar el estado de la transacción
+        let attempts = 0;
+        const maxAttempts = 20;
+        
+        while (attempts < maxAttempts) {
+          const txResult = await result.rpc.getTransaction(sendResult.hash);
+          
+          if (txResult.status === 'SUCCESS') {
+            setMensaje("¡Transacción confirmada en la red!");
+            break;
+          } else if (txResult.status === 'FAILED') {
+            throw new Error(`Transacción falló: ${txResult.errorResult}`);
+          }
+          
+          // Esperar 2 segundos antes del siguiente intento
+          await new Promise(resolve => setTimeout(resolve, 2000));
+          attempts++;
+        }
+        
+        if (attempts >= maxAttempts) {
+          throw new Error("La transacción no se confirmó después de 20 intentos");
+        }
       } else {
         setMensaje("Transacción completada exitosamente");
       }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useStellar } from "../contexts/StellarContext";
 import { formatAddress } from "../config/stellar";
-import { WalletInstructions } from "./WalletInstructions";
+// import { WalletInstructions } from "./WalletInstructions";
 
 const WalletButton: React.FC = () => {
   const [showInstructions, setShowInstructions] = useState(false);
@@ -89,7 +89,7 @@ const WalletButton: React.FC = () => {
        </button>
       
       {showInstructions && (
-        <WalletInstructions onClose={() => setShowInstructions(false)} />
+        {/* <WalletInstructions onClose={() => setShowInstructions(false)} /> */}
       )}
     </>
   );

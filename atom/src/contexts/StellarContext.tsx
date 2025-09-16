@@ -1,11 +1,8 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
 import { 
   StellarWalletsKit, 
   WalletNetwork, 
-  allowAllModules,
-  FREIGHTER_ID,
-  XBULL_ID,
-  ALBEDO_ID
+  allowAllModules
 } from '@creit.tech/stellar-wallets-kit';
 import { getCurrentNetworkConfig } from '../config/stellar';
 
@@ -45,7 +42,7 @@ export const StellarProvider: React.FC<StellarProviderProps> = ({ children }) =>
     const initializeKit = async () => {
       try {
         
-        const networkConfig = getCurrentNetworkConfig();
+        // const networkConfig = getCurrentNetworkConfig();
         
         // Crear el kit con todos los módulos disponibles
         const newKit = new StellarWalletsKit({
@@ -57,14 +54,14 @@ export const StellarProvider: React.FC<StellarProviderProps> = ({ children }) =>
         
         // Verificar si ya hay wallets conectadas
         try {
-          const connectedWallets = await newKit.getConnectedWallets();
+          // const connectedWallets = await newKit.getConnectedWallets();
           
-          if (connectedWallets && connectedWallets.length > 0) {
-            const wallet = connectedWallets[0];
-            setIsConnected(true);
-            setAddress(wallet.publicKey);
-            setSelectedWallet(wallet.id);
-          }
+          // if (connectedWallets && connectedWallets.length > 0) {
+          //   const wallet = connectedWallets[0];
+          //   setIsConnected(true);
+          //   setAddress(wallet.publicKey);
+          //   setSelectedWallet(wallet.id);
+          // }
         } catch (walletError) {
         }
         
@@ -148,11 +145,11 @@ export const StellarProvider: React.FC<StellarProviderProps> = ({ children }) =>
       return signedTxXdr;
       
     } catch (err) {
-      throw new Error(`Error al firmar la transacción: ${err.message}`);
+      throw new Error(`Error al firmar la transacción: ${err instanceof Error ? err.message : 'Unknown error'}`);
     }
   };
 
-  const callContract = async (contractAddress: string, functionName: string, args: any[] = []) => {
+  const callContract = async (_contractAddress: string, _functionName: string, _args: any[] = []) => {
     if (!kit || !isConnected) {
       throw new Error('Wallet no conectada');
     }

@@ -3,7 +3,7 @@ import { useStellar } from '../contexts/StellarContext';
 
 // Hook principal que combina todos los contratos
 export const useStellarContracts = () => {
-  const { isConnected, address, isLoading, error } = useStellar();
+  const { isConnected, address } = useStellar();
   const landToken = useLandTokenContract();
   const marketplace = useMarketplaceContract();
 
@@ -11,15 +11,13 @@ export const useStellarContracts = () => {
     // Estado de conexión
     isConnected,
     address,
-    isLoading,
-    error,
     
     // Contratos
     landToken,
     marketplace,
     
     // Funciones de utilidad
-    isReady: isConnected && !isLoading && !error,
+    isReady: isConnected,
   };
 };
 
