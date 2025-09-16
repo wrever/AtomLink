@@ -11,7 +11,7 @@ const API = import.meta.env.VITE_BACKEND_URL;
 const TerrenoDetalles = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { isConnected, address, connectWallet } = useStellar();
+  const { isConnected, address, connectWallet, signTransaction } = useStellar();
   const [isLoading, setIsLoading] = useState(false);
   const [mensaje, setMensaje] = useState<string | null>(null);
   const [cantidadTokens, setCantidadTokens] = useState(1);
@@ -147,7 +147,8 @@ const TerrenoDetalles = () => {
         setMensaje("Firmando transacción en tu wallet...");
         
         // Firmar la transacción usando el contexto Stellar
-        // const signedXdr = await signTransaction(result.transaction);
+        void await signTransaction(result.transaction);
+        // Se firma pero no se procesa el resultado (mockup)
         
         setMensaje("Procesando transacción...");
         
