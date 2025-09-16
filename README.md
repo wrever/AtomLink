@@ -1,7 +1,7 @@
-# AtomLink - Real-World Asset Tokenization Platform
+# AtomLink | Land Tokenization Platform
 
 > **Meridian 2025 Hackathon Submission**  
-> *Transforming Real-World Assets into Digital Tokens on Stellar Network*
+> *Transforming Mining Lands and Real Estate into Digital Tokens on Stellar Network*
 
 [![Stellar Network](https://img.shields.io/badge/Stellar-Network-7D00FF?style=for-the-badge&logo=stellar)](https://stellar.org)
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org)
@@ -12,7 +12,7 @@
 
 ## The Problem We're Solving
 
-The global real estate and mining asset markets are **$280+ trillion** in value, yet remain largely illiquid and inaccessible to retail investors. Traditional barriers include:
+The global real estate and mining land markets are **$280+ trillion** in value, yet remain largely illiquid and inaccessible to retail investors. Traditional barriers include:
 
 - **High minimum investments** ($100K+ typically required)
 - **Geographic limitations** (local-only investments)
@@ -26,13 +26,13 @@ The global real estate and mining asset markets are **$280+ trillion** in value,
 
 ## Our Solution: AtomLink
 
-AtomLink is a **next-generation RWA (Real-World Asset) tokenization platform** built on Stellar Network that democratizes access to high-value assets through blockchain technology.
+AtomLink is a **next-generation land tokenization platform** built on Stellar Network that democratizes access to high-value mining lands and real estate through blockchain technology.
 
 ### Key Innovation
 We're the **first platform** to combine:
 - **Stellar Network** for ultra-low fees and fast transactions
-- **Soroban Smart Contracts** for advanced asset management
-- **Multi-asset support** (Mining, Real Estate, Agriculture, Energy)
+- **Soroban Smart Contracts** for advanced land management
+- **Multi-lands support** (Mining Lands, Real Estate, Agricultural Lands, Energy Lands)
 - **Fractional ownership** with real-time trading
 - **Regulatory compliance** built-in
 
@@ -80,8 +80,8 @@ Stellar Network + Soroban
 
 ## Live Demo Features
 
-### 1. Asset Tokenization
-- **Smart Proposal System**: Submit assets for tokenization
+### 1. Land Tokenization
+- **Smart Proposal System**: Submit lands for tokenization
 - **Due Diligence**: Automated verification and admin review
 - **Instant Deployment**: Deploy smart contracts in minutes
 - **Real-time Pricing**: Dynamic token pricing based on market demand
@@ -90,10 +90,10 @@ Stellar Network + Soroban
 - **Fractional Ownership**: Buy as little as 1 token ($100)
 - **Instant Trading**: Trade tokens 24/7 on Stellar Network
 - **Price Discovery**: Transparent, market-driven pricing
-- **Liquidity Pools**: Built-in liquidity for all assets
+- **Liquidity Pools**: Built-in liquidity for all lands
 
 ### 3. Portfolio Management
-- **Real-time Dashboard**: Track all your tokenized assets
+- **Real-time Dashboard**: Track all your tokenized lands
 - **Analytics**: Performance metrics and ROI tracking
 - **Notifications**: Real-time updates on your investments
 - **Mobile Responsive**: Trade anywhere, anytime
@@ -109,15 +109,16 @@ Stellar Network + Soroban
 ## Business Model & Market Opportunity
 
 ### Revenue Streams
-1. **Tokenization Fees**: 2-5% of asset value
-2. **Trading Fees**: 0.5% per transaction
+1. **Tokenization Fees**: 1% of asset value (for mining companies, only 1 time)
+2. **Trading Fees**: 1.5% per transaction (buy tokens)
+3. **Distribution Fees**: 0.5% per distribution (profit distribution)
 3. **Premium Services**: Advanced analytics, legal support
 4. **API Licensing**: White-label solutions for institutions
 
 ### Market Size
 - **Total Addressable Market**: $280T (Global Real Estate + Mining)
-- **Serviceable Market**: $50T (Tokenizable Assets)
-- **Initial Target**: $1B (High-value mining assets in Latin America)
+- **Serviceable Market**: $50T (Tokenizable Lands)
+- **Initial Target**: $1B (High-value mining lands in Latin America)
 
 ### Competitive Advantage
 - **First-mover** on Stellar Network for RWA
@@ -131,13 +132,13 @@ Stellar Network + Soroban
 ## Target Market
 
 ### Primary Users
-- **Mining Companies**: Tokenize assets for capital raising
-- **Retail Investors**: Access previously unavailable assets
+- **Mining Companies**: Tokenize lands for capital raising
+- **Retail Investors**: Access previously unavailable lands
 - **Real Estate Developers**: Fractionalize properties
 - **Agricultural Cooperatives**: Tokenize farmland
 
 ### Geographic Focus
-- **Phase 1**: Latin America (Argentina, Chile, Peru)
+- **Phase 1**: Latin America (Argentina, Chile, Peru, Bolivia)
 - **Phase 2**: North America & Europe
 - **Phase 3**: Global expansion
 
@@ -146,15 +147,15 @@ Stellar Network + Soroban
 ## Why We'll Win Meridian 2025
 
 ### 1. Technical Excellence
-- **Production-ready code** (100+ files, thousands of lines)
-- **Multi-blockchain integration** (Stellar + Ethereum)
-- **Advanced smart contracts** (10+ contracts deployed)
+- **Production-ready code** (30+ files, thousands of lines)
+- **Blockchain integration** (Stellar)
+- **Advanced smart contracts** (1+ contracts deployed)
 - **Scalable architecture** (handles millions of transactions)
 
 ### 2. Real-World Impact
 - **Democratizing investment** access globally
-- **Unlocking trillions** in illiquid assets
-- **Enabling fractional ownership** of premium assets
+- **Unlocking trillions** in illiquid lands
+- **Enabling fractional ownership** of premium lands
 - **Creating new investment** opportunities
 
 ### 3. Innovation on Stellar
@@ -262,22 +263,6 @@ $dbname = 'atomlink_all';
 
 ---
 
-## Team
-
-### Core Team
-- **Lead Developer**: Full-stack blockchain developer
-- **Smart Contract Engineer**: Stellar/Soroban specialist
-- **UI/UX Designer**: Modern, intuitive interfaces
-- **Business Development**: Market expansion expert
-
-### Advisors
-- **Blockchain Expert**: Stellar Network specialist
-- **Legal Counsel**: RWA regulatory compliance
-- **Mining Industry**: 20+ years experience
-- **Financial Services**: Traditional finance background
-
----
-
 ## Metrics & KPIs
 
 ### Technical Metrics
@@ -291,15 +276,6 @@ $dbname = 'atomlink_all';
 - **Active Users**: 1,000+ investors
 - **Trading Volume**: $1M+ monthly
 - **Revenue Growth**: 300% YoY target
-
----
-
-## Awards & Recognition
-
-- **Meridian 2025 Hackathon** - Grand Prize Winner
-- **Stellar Community** - Featured Project
-- **Industry Recognition** - RWA Innovation Award
-- **Media Coverage** - TechCrunch, CoinDesk
 
 ---
 
@@ -341,7 +317,7 @@ $dbname = 'atomlink_all';
 
 ## Join the Revolution
 
-**AtomLink is not just a platform—it's a movement to democratize access to the world's most valuable assets.**
+**AtomLink is not just a platform—it's a movement to democratize access to the world's most valuable lands.**
 
 ### For Investors
 - **Start with $100** instead of $100,000
@@ -374,7 +350,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Stellar Development Foundation** for the amazing blockchain infrastructure
 - **Meridian 2025 Hackathon** organizers for this incredible opportunity
 - **Open Source Community** for the tools and libraries that made this possible
-- **Early Adopters** who believe in the future of tokenized assets
+- **Early Adopters** who believe in the future of tokenized lands
 
 ---
 
