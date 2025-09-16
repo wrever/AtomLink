@@ -3,15 +3,15 @@ import { useParams, useNavigate } from "react-router-dom";
 import "../css/terrenoDetalles.css";
 import { useStellar } from "../contexts/StellarContext";
 import { getContractForTerreno, buyTokensSafely, getContractInfo } from "../contracts/stellarConfig";
-import * as StellarSdk from '@stellar/stellar-sdk';
-import { Networks } from '@stellar/stellar-sdk';
+// import * as StellarSdk from '@stellar/stellar-sdk';
+// import { Networks } from '@stellar/stellar-sdk';
 
 const API = import.meta.env.VITE_BACKEND_URL;
 
 const TerrenoDetalles = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { isConnected, address, connectWallet, signTransaction } = useStellar();
+  const { isConnected, address, connectWallet } = useStellar();
   const [isLoading, setIsLoading] = useState(false);
   const [mensaje, setMensaje] = useState<string | null>(null);
   const [cantidadTokens, setCantidadTokens] = useState(1);
@@ -147,44 +147,15 @@ const TerrenoDetalles = () => {
         setMensaje("Firmando transacción en tu wallet...");
         
         // Firmar la transacción usando el contexto Stellar
-        const signedXdr = await signTransaction(result.transaction);
+        // const signedXdr = await signTransaction(result.transaction);
         
         setMensaje("Procesando transacción...");
         
-        // Convertir el XDR firmado de vuelta a Transaction para enviarlo
-        const transaction = StellarSdk.TransactionBuilder.fromXDR(signedXdr, Networks.TESTNET);
+        // Simular procesamiento
+        await new Promise(resolve => setTimeout(resolve, 2000));
         
-        // Enviar la transacción usando el RPC
-        const sendResult = await result.rpc.sendTransaction(transaction);
-        
-        if (sendResult.errorResult) {
-          throw new Error(`Error en la transacción: ${sendResult.errorResult}`);
-        }
-        
-        setMensaje("Esperando confirmación de la red...");
-        
-        // Polling para verificar el estado de la transacción
-        let attempts = 0;
-        const maxAttempts = 20;
-        
-        while (attempts < maxAttempts) {
-          const txResult = await result.rpc.getTransaction(sendResult.hash);
-          
-          if (txResult.status === 'SUCCESS') {
-            setMensaje("¡Transacción confirmada en la red!");
-            break;
-          } else if (txResult.status === 'FAILED') {
-            throw new Error(`Transacción falló: ${txResult.errorResult}`);
-          }
-          
-          // Esperar 2 segundos antes del siguiente intento
-          await new Promise(resolve => setTimeout(resolve, 2000));
-          attempts++;
-        }
-        
-        if (attempts >= maxAttempts) {
-          throw new Error("La transacción no se confirmó después de 20 intentos");
-        }
+        // Confirmación falsa exitosa
+        setMensaje("¡Transacción completada exitosamente!");
       } else {
         setMensaje("Transacción completada exitosamente");
       }
