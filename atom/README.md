@@ -49,7 +49,6 @@ React 18 + TypeScript + Vite
 
 ### Smart Contracts
 - **Simple Token Contract**: Deployed on Stellar Testnet
-- **Contract Address**: `CBDYP24VQBEXEONDO74DDAL3LTFSPSRD7JIVBP53YKDXK7YBH2CPHFP4`
 - **Token Details**: 5 XLM per token, 100,000 max supply
 - **Functions**: `buy_tokens`, `get_balance`, `transfer`
 
@@ -82,7 +81,7 @@ npm run dev
 # Create .env file
 VITE_BACKEND_URL=https://atomlink.pro/backend/api
 VITE_STELLAR_NETWORK=testnet
-VITE_CONTRACT_ADDRESS=CBDYP24VQBEXEONDO74DDAL3LTFSPSRD7JIVBP53YKDXK7YBH2CPHFP4
+VITE_CONTRACT_ADDRESS=YOUR_CONTRACT_ADDRESS_HERE
 ```
 
 ---
