@@ -39,7 +39,7 @@ export const STELLAR_CONTRACTS = {
     }
   },
   SIMPLE_TOKEN: {
-    address: 'YOUR_CONTRACT_ADDRESS_HERE',
+    address: 'CBDYP24VQBEXEONDO74DDAL3LTFSPSRD7JIVBP53YKDXK7YBH2CPHFP4',
     name: 'SimpleToken',
     functions: {
       buy_tokens: 'buy_tokens',
